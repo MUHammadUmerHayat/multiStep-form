@@ -1,11 +1,17 @@
 import React from 'react'
 import MyForm from './Components/Form'
-// import Strapper from './Components/Strapper'
+import "./App.css"
+import {Typography, AppBar, Toolbar} from "@material-ui/core";
 
 function App() {
   return (
     <div className="App">
-      <MyForm/>
+      <AppBar position="relative">
+        <Toolbar>
+          <Typography variant="h4" align="center">CREATE NEW ACCOUNT</Typography>
+        </Toolbar>
+      </AppBar>
+      <MyForm />
     </div>
   )
 }

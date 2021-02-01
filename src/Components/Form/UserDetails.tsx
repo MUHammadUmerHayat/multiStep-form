@@ -6,7 +6,7 @@ import {validations} from "../validations&InitialValues"
 
 function UserDetails() {
     return (
-        <FormikStep validationSchema={validations}>
+        <FormikStep validationSchema={validations} label="User Info">
             <Box marginBottom={2}>
                 <FormGroup>
                     <Field

@@ -6,7 +6,7 @@ import {validations} from "../validations&InitialValues"
 
 function Review() {
     return (
-        <FormikStep validationSchema={validations}>
+        <FormikStep validationSchema={validations} label="Review">
             <Box marginBottom={2}>
                 <FormGroup>
                     <Typography variant="body2">{`

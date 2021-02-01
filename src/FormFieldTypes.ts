@@ -1,4 +1,4 @@
-import {CheckboxProps} from "@material-ui/core"
+import { CheckboxProps } from "@material-ui/core"
 import { FormikConfig, FormikValues } from "formik";
 
 export interface FormFieldTypes {
@@ -19,6 +19,7 @@ export interface MyCheckboxType extends CheckboxProps {
     label?: string;
 }
 
-export interface FormikStepProps extends Pick<FormikConfig<FormikValues>, "children" | "validationSchema">{
-    
+export interface FormikStepProps
+  extends Pick<FormikConfig<FormikValues>, 'children' | 'validationSchema'> {
+  label: string;
 }

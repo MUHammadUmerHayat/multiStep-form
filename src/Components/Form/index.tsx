@@ -1,27 +1,27 @@
-import { Form, Formik } from "formik";
-import { Card, CardContent, Typography, } from "@material-ui/core";
-import { validations, InitialValues } from "../validations&InitialValues";
+import { Card, CardContent } from "@material-ui/core";
+import { InitialValues } from "../validations&InitialValues";
 import UserDetails from "./UserDetails";
 import Privacy from "./Privacy";
 import Review from "./Review";
 import FormikStrapper from "../FormikStrapper";
 
 function MyForm() {
+    const sleep = (time: any) => new Promise((acc) => setTimeout(acc, time))
     return (
-        <Card className="container">
-            <CardContent>
-                <Typography variant="h4" align="center">CREATE NEW ACCOUNT</Typography>
-                <FormikStrapper
-                    initialValues={InitialValues}
-                    onSubmit={(values) => {
-                        console.log(values);
-                    }}>
-                    <UserDetails />
-                    <Privacy />
-                    <Review />
-                </FormikStrapper>
-            </CardContent>
-        </Card>
+            <Card className="container">
+                <CardContent>
+                    <FormikStrapper
+                        initialValues={InitialValues}
+                        onSubmit={async (values) => {
+                            await sleep(3000)
+                            console.log(values);
+                        }}>
+                        <UserDetails />
+                        <Privacy />
+                        <Review />
+                    </FormikStrapper>
+                </CardContent>
+            </Card>
     );
 }
 

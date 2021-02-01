@@ -1,14 +1,9 @@
-import { FormikConfig, FormikValues } from 'formik'
 import {FormikStepProps} from "../FormFieldTypes";
 
 
 
 function FormikStep({ children }: FormikStepProps) {
-    return (
-        <>
-            {children}
-        </>
-    )
-}
+    return <>{children}</>;
+  }
 
 export default FormikStep

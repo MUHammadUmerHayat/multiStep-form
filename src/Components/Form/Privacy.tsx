@@ -4,7 +4,7 @@ import FormikStep from "../FormikStep";
 import {validations} from "../validations&InitialValues"
 function Privacy() {
     return (
-        <FormikStep validationSchema={validations}>
+        <FormikStep validationSchema={validations} label="Privacy">
             <Box marginBottom={2}>
                 <FormGroup>
                     <Field
