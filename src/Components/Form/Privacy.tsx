@@ -1,9 +1,10 @@
-import { Field, Form, ErrorMessage } from "formik";
+import { Field, ErrorMessage } from "formik";
 import { Box, FormGroup, TextField } from "@material-ui/core";
-
-function Privacy({ submit }: any) {
+import FormikStep from "../FormikStep";
+import {validations} from "../validations&InitialValues"
+function Privacy() {
     return (
-        <Form>
+        <FormikStep validationSchema={validations}>
             <Box marginBottom={2}>
                 <FormGroup>
                     <Field
@@ -25,7 +26,7 @@ function Privacy({ submit }: any) {
                         helperText={<ErrorMessage name="ConfirmPassword" />} />
                 </FormGroup>
             </Box>
-        </Form>
+        </FormikStep>
     );
 }
 

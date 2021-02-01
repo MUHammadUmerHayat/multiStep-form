@@ -1,10 +1,12 @@
-import { Field, Form, ErrorMessage } from "formik";
+import { Field, ErrorMessage } from "formik";
 import { Box, FormGroup, TextField, Typography } from "@material-ui/core";
 import { MyCheckbox } from "../Checkbox";
+import FormikStep from "../FormikStep";
+import {validations} from "../validations&InitialValues"
 
-function UserDetails({ submit }: any) {
+function UserDetails() {
     return (
-        <Form>
+        <FormikStep validationSchema={validations}>
             <Box marginBottom={2}>
                 <FormGroup>
                     <Field
@@ -70,7 +72,7 @@ function UserDetails({ submit }: any) {
                         required />
                 </FormGroup>
             </Box>
-        </Form>
+        </FormikStep>
     );
 }
 
